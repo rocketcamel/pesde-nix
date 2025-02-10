@@ -10,7 +10,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      binary = pkgs.callPackage ./default.nix { };
+      binary = pkgs.callPackage ./package.nix { };
     in
     {
       packages.${system}.default = pkgs.buildFHSEnv {
@@ -20,6 +20,7 @@
             zlib
             openssl
             binary
+            dbus
           ];
         runScript = "pesde";
       };
