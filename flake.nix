@@ -14,7 +14,7 @@
     in
     {
       packages.${system}.default = pkgs.buildFHSEnv {
-        name = "pesde-nix";
+        name = "pesde";
         targetPkgs =
           pkgs: with pkgs; [
             zlib
