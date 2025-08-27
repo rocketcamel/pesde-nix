@@ -6,8 +6,8 @@
 }:
 
 let
-  rversion = "0.6.2";
-  registryVersion = "registry.0.2.2";
+  rversion = "0.7.1";
+  registryVersion = "registry.0.2.3";
 in
 stdenv.mkDerivation rec {
   pname = "pesde";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/pesde-pkg/pesde/releases/download/${version}/${pname}-${rversion}-linux-x86_64.zip";
-    sha256 = "sha256-zZeEsdwVr77F25vbT/giBfMGYSDb0PhPkkBH2RDyNVw=";
+    sha256 = "sha256-HzewzRRbEL7KI2I0wTs6JVnADYFwUupTZFrRpmkN838=";
   };
 
   unpackPhase = "unzip $src";
